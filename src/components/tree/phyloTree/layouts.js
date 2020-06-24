@@ -280,9 +280,13 @@ export const mapToScreen = function mapToScreen() {
     top: this.params.margins.top,
     bottom: this.params.margins.bottom};
   const inViewTerminalNodes = this.nodes.filter((d) => d.terminal).filter((d) => d.inView);
-  if (inViewTerminalNodes.length < this.params.tipLabelBreakL1) {
+  if (inViewTerminalNodes.length < this.params.tipLabelBreakL0) {
 
-    let fontSize = this.params.tipLabelFontSizeL1;
+    let fontSize = this.params.tipLabelFontSizeL0;
+
+    if (inViewTerminalNodes.length < this.params.tipLabelBreakL1) {
+      fontSize = this.params.tipLabelFontSizeL1;
+    }
     if (inViewTerminalNodes.length < this.params.tipLabelBreakL2) {
       fontSize = this.params.tipLabelFontSizeL2;
     }
