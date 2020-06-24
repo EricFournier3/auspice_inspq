@@ -19,14 +19,16 @@ export const updateTipLabels = function updateTipLabels(dt) {
   const inViewVisibleTips = inViewTips.filter((d) => d.visibility === NODE_VISIBLE);
 
   /* We show tip labels by checking the number of "inView & visible" tips */
-  if (inViewVisibleTips.length < this.params.tipLabelBreakL1) {
+  if (inViewVisibleTips.length < this.params.tipLabelBreakL0) {
 
     /* We calculate font size based on the total number of in view tips (both visible & non-visible) */
-    let fontSize = this.params.tipLabelFontSizeL1;
+    let fontSize = this.params.tipLabelFontSizeL0;
     if (inViewTips.length < this.params.tipLabelBreakL3) {
       fontSize = this.params.tipLabelFontSizeL3;
     } else if (inViewTips.length < this.params.tipLabelBreakL2) {
       fontSize = this.params.tipLabelFontSizeL2;
+    } else if (inViewTips.length < this.params.tipLabelBreakL1) {
+      fontSize = this.params.tipLabelFontSizeL1;
     }
 
     window.setTimeout(() => {
