@@ -36,9 +36,11 @@ export const createDefaultParams = () => ({
   tipLabelPadX: 8,
   tipLabelPadY: 2,
   mapToScreenDebounceTime: 500,
+  tipLabelFontSizeL0: 6,
   tipLabelFontSizeL1: 8,
   tipLabelFontSizeL2: 10,
   tipLabelFontSizeL3: 12,
+  tipLabelBreakL0: 150,
   tipLabelBreakL1: 75,
   tipLabelBreakL2: 50,
   tipLabelBreakL3: 25
