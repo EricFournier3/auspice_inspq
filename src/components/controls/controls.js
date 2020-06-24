@@ -23,7 +23,6 @@ function Controls({mapOn}) {
 
   return (
     <ControlsContainer>
-      <ChooseDataset/>
 
       <SidebarHeader>{t("sidebar:Date Range")}</SidebarHeader>
       <DateRangeInputs/>
